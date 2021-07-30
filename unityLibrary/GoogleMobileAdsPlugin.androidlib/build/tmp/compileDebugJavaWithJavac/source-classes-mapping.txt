@@ -1,0 +1,2 @@
+com/google/unity/ads/BuildConfig.java
+ com.google.unity.ads.BuildConfig
