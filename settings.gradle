@@ -1,2 +1,5 @@
 rootProject.name = "Pin Up"
 include ':app'
+include ':unityLibrary:GoogleMobileAdsPlugin.androidlib'
+include ':unityLibrary'
+include ':launcher'

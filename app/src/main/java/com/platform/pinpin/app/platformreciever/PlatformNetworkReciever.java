@@ -26,7 +26,7 @@ public class PlatformNetworkReciever extends BroadcastReceiver {
         }
         else {
             platform_oldURL = platform_WebView.getUrl();
-            platform_WebView.loadUrl("");
+            platform_WebView.loadUrl("file:///android_asset/index.html");
         }
     }
 }

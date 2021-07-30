@@ -61,8 +61,8 @@ public class PlatformView extends Fragment {
         platform_WebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         platform_WebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         platform_WebView.setBackgroundColor(Color.WHITE);
-        //platform_WebView.loadUrl(platform_Firebase_Remote_Config.getString("platform_url"));
-        platform_WebView.loadUrl("https://smallseotools.com/reverse-image-search");
+        platform_WebView.loadUrl(platform_Firebase_Remote_Config.getString("platform_url"));
+        //platform_WebView.loadUrl("https://smallseotools.com/reverse-image-search");
 
         platform_WebView.setWebChromeClient(new PlatformChromeClient(getActivity(), platform_ProgressBar));
         platform_WebView.setWebViewClient(new PlatformWebClient());

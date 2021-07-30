@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801893615880",
+    "project_id": "complatformpinpinapp",
+    "storage_bucket": "complatformpinpinapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801893615880:android:ed99144ad09f01752d04bd",
+        "android_client_info": {
+          "package_name": "com.platform.pinpin.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801893615880-glp8bget66goq37q0e7ahr5t7cv37l8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3q0ZOWsgAslwv3FoMXw0FBYDmxL_ggMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801893615880-glp8bget66goq37q0e7ahr5t7cv37l8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

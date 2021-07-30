@@ -12,7 +12,9 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -49,7 +51,11 @@ dependencies {
     //Firebase
     implementation 'com.google.firebase:firebase-core:18.0.3'
     implementation 'com.google.firebase:firebase-config:20.0.4'
+
+    implementation project(':unityLibrary')
+
+    compile 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
 }
 
 apply plugin:'com.onesignal.androidsdk.onesignal-gradle-plugin'
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'

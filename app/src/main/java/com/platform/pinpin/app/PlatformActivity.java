@@ -11,6 +11,7 @@ import android.os.Bundle;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.platform.pinpin.app.platformconst.PlatformConst;
+import com.unity3d.player.UnityPlayerActivity;
 
 public class PlatformActivity extends AppCompatActivity {
 
@@ -21,23 +22,32 @@ public class PlatformActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.platform_activity);
 
-       /* platform_Firebase_Remote_Config = FirebaseRemoteConfig.getInstance();
+        platform_Firebase_Remote_Config = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings platform_firebaseRemoteConfigSettings = new FirebaseRemoteConfigSettings.Builder().build();
         platform_Firebase_Remote_Config.setDefaultsAsync(R.xml.platform_url);
         platform_Firebase_Remote_Config.setConfigSettingsAsync(platform_firebaseRemoteConfigSettings);
 
-        if(!platform_Firebase_Remote_Config.getString("platform_url").equals("platform_url"))
+
+        String url = platform_Firebase_Remote_Config.getString("platform_url");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if(!platform_Firebase_Remote_Config.getString("platform_pinup_url").equals("platform_pinup_url"))
         {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        }else{*/
+            platformView = new PlatformView(platform_Firebase_Remote_Config);
+            fragmentTransaction.add(R.id.content_view, platformView);
+            fragmentTransaction.commit();
+        }else {
+            Intent i = new Intent(this, UnityPlayerActivity.class);
+            startActivity(i);
+            finish();
+        }
 
-        //}
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        platformView = new PlatformView(platform_Firebase_Remote_Config);
-        fragmentTransaction.add(R.id.content_view, platformView);
-        fragmentTransaction.commit();
 
     }
 
